@@ -36,11 +36,12 @@ Things you may want to cover:
 ### Association 
 - has_many :users,thrugh: members 
 - has_many :members 
+- has_many :messages
 
-## messageテーブル 
+## messagesテーブル 
 |Cloumn|Tyoe|Option| 
 |------|----|------| 
-|massage|storing|null:false,| 
+|massages|storing|null:false,| 
 
 ### Association 
 - belongs_to :users 
