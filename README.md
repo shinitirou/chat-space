@@ -16,12 +16,12 @@ Things you may want to cover:
 - belongs_to :group 
 - belongs_to :user 
 
-## USERS テーブル
+## USERS テーブル 
 
-|Cloumn|Type|Options|
-|------|----|-------|
-|name|string|index:true,null:false,unque:true|
-|mail|string|null:false|
+|Cloumn|Type|Options| 
+|------|----|-------| 
+|name|string|index:true,null:false,unque:true| 
+|mail|string|null:false| 
 
 ### Association
 - has_many :groups,thrugh: members
