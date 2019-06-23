@@ -28,10 +28,10 @@ Things you may want to cover:
 - has_many :messages 
 - has_many :members 
 
-## GROUP テーブル
-|Cloumn|Type|Option|
-|------|----|------|
-|name|string|index:true,null:false,unique:true|
+## GROUP テーブル 
+|Cloumn|Type|Option| 
+|------|----|------| 
+|name|string|index:true,null:false,unique:true| 
 
 ### Association
 - has_many :users,thrugh: members
