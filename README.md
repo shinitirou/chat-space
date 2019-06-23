@@ -16,6 +16,37 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+## USERS テーブル
+
+|Cloumn|Type|Options|
+|------|----|-------|
+|name|string|index:true,null:false,unque:true|
+|mail|string|null:false|
+
+### Association
+- has_many :groups,thrugh: members
+- has_many :messages
+- has_many :members
+
+## GROUP テーブル
+|Cloumn|Type|Option|
+|------|----|------|
+|name|string|index:true,null:false,unique:true|
+
+### Association
+- has_many :users,thrugh: members
+- has_many :members
+
+## messageテーブル
+|Cloumn|Tyoe|Option|
+|------|----|------|
+|massage|storing|null:false,|
+
+### Association
+-belongs_to :users
+
+
+
 
 * Ruby version
 
