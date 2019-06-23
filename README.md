@@ -43,8 +43,8 @@ Things you may want to cover:
 |massage|storing|null:false| 
 |time|timedstamp|null:false| 
 
-### Association
-- belongs_to :users
+### Association 
+- belongs_to :users 
 
 
 
