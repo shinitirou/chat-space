@@ -39,9 +39,9 @@ Things you may want to cover:
 - has_many :messages
 
 ## messagesテーブル 
-|Cloumn|Tyoe|Option| 
+|Cloumn|Type|Option| 
 |------|----|------| 
-|massages|storing|null:false,| 
+|content|storing|null:false,| 
 
 ### Association 
 - belongs_to :users 
