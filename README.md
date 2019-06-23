@@ -40,8 +40,7 @@ Things you may want to cover:
 ## messageテーブル
 |Cloumn|Tyoe|Option|
 |------|----|------|
-|massage|storing|null:false|
-|time|timedstamp|null:false|
+|massage|storing|null:false,|
 
 ### Association
 - belongs_to :users
