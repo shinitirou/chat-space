@@ -37,10 +37,10 @@ Things you may want to cover:
 - has_many :users,thrugh: members 
 - has_many :members 
 
-## messageテーブル
-|Cloumn|Tyoe|Option|
-|------|----|------|
-|massage|storing|null:false,|
+## messageテーブル 
+|Cloumn|Tyoe|Option| 
+|------|----|------| 
+|massage|storing|null:false,| 
 
 ### Association
 - belongs_to :users
