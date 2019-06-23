@@ -41,7 +41,8 @@ Things you may want to cover:
 ## messagesテーブル 
 |Cloumn|Type|Option| 
 |------|----|------| 
-|content|storing|null:false,| 
+|content|string|null:false,| 
+|image|string|
 
 ### Association 
 - belongs_to :users 
