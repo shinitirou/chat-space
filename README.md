@@ -41,7 +41,7 @@ Things you may want to cover:
 ## messagesテーブル 
 |Cloumn|Type|Option| 
 |------|----|------| 
-|content|string|null:false,| 
+|content|string| 
 |image|string|
 |user_id|integer|null:false,foreign_key: true|
 |group_id|integer|null:false,foreign_key: true|
