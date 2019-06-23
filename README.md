@@ -33,9 +33,9 @@ Things you may want to cover:
 |------|----|------| 
 |name|string|index:true,null:false,unique:true| 
 
-### Association
-- has_many :users,thrugh: members
-- has_many :members
+### Association 
+- has_many :users,thrugh: members 
+- has_many :members 
 
 ## messageテーブル
 |Cloumn|Tyoe|Option|
