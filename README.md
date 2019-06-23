@@ -43,7 +43,7 @@ Things you may want to cover:
 |massage|storing|null:false,|
 
 ### Association
--belongs_to :users
+- belongs_to :users
 
 
 
