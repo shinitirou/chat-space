@@ -25,10 +25,29 @@ html, body {
     width:300px;
     height: 100px;
     display: flex;
-    .username{
-      padding-left: 20px;
-      line-height:100px;
+    .username-box{
+      width: 100%;
+      margin: auto;
+      height: 24px;
+      padding: 0 20px;
       color:white;
+      justify-content: flex-start;
+      .username{
+        float: left;
+        width: 80px;
+        height: 24px;
+        color:white;
+        font-size: 16px;
+        font-weight:bold;
+      }
+      .icon-box{
+        margin: 0 0 0 auto;
+        height: 24px;
+        width: 40px;
+        .contents__btn{
+         color: white
+        }
+      }
     }
   }
   .leftblock{
@@ -154,7 +173,6 @@ html, body {
       }
     }
   }
-  
   
 
 }

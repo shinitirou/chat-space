@@ -4,8 +4,14 @@
 
 .left
   .left__header
-    .username username
-    .member menber
+    .username-box
+      .username username
+      .icon-box
+        .newgroup
+        =link_to "https://twitter.com/", class: "contents__btn" do
+          = fa_icon 'edit'     
+        =link_to "https://facebook.com/", class: "contents__btn" do
+          = fa_icon 'cog'     
 
   .leftblock
     .leftblock__main
