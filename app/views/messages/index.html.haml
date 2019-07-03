@@ -49,5 +49,10 @@
     .form
       .form__box
         .textbox
-        .sendbtn  send
+          %input#textbox.formbox__textbox{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          .form__mask
+          %label.form__mask__image
+            =fa_icon 'picture-o',class: 'icon'
+          -# %input.hidden{type: 'file'}
+        %input.sendbtn{type: 'submit', value:'Send'}
 
