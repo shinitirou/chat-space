@@ -4,15 +4,15 @@ html, body {
   height: 100%;
   width: 100vw;
 }
-// .top{
-//   height: 18px;
-//   background-color: #38AEF0;
-//   width: 100%;
-//   text-align: center;
-//   color:white;
-//   font-size: 14px;
-//   line-height: 18px;
-// }
+.top{
+  height: 18px;
+  background-color: #38AEF0;
+  width: 100%;
+  text-align: center;
+  color:white;
+  font-size: 14px;
+  line-height: 18px;
+}
 
 .left{
   display: inline-block;
@@ -25,7 +25,7 @@ html, body {
     width:300px;
     height: 100px;
     display: flex;
-    .username-box{
+    &__username-box{
       width: 100%;
       margin: auto;
       height: 24px;
@@ -67,9 +67,6 @@ html, body {
         color:white;
       }
     }
-   
-
-
   } 
 }
 .right{
@@ -84,7 +81,7 @@ html, body {
     height: 100px;
     display: flex;
     border-bottom:solid 1px #eeeeee;
-    .right-group{
+    &__group{
       font-size: 20px;
       margin: 35px 20px 0 40px;
       color: #333;
@@ -100,7 +97,7 @@ html, body {
         color:#999999;
       }
     }
-    .edit-btn{
+    &__editbtn{
       height: 40px;
       margin: 28px 40px 0 0;
       line-height: 40px;
@@ -154,7 +151,7 @@ html, body {
         font-size: 20px  ;
         background-color: #ddd;
         
-        .textbox{
+        &__textbox{
           border: none;
           background-color: white;
           height: 50px;

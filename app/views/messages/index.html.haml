@@ -1,10 +1,10 @@
 
--# .top
--#   グループを作成しました
+.top
+  グループを作成しました
 
 .left
   .left__header
-    .username-box
+    .left__header__username-box
       .username username
       .icon-box
         .newgroup
@@ -29,10 +29,10 @@
 
 .right
   .right__header
-    .right-group
-      .right__groupname groupname
+    .right__header__group
+      .right-groupname groupname
       .member menber
-    .edit-btn Edit
+    .right__header__editbtn Edit
   .right__main  
     .message
       .message-username username
@@ -48,7 +48,7 @@
       .message-text  hogeß
     .form
       .form__box
-        .textbox
+        .form__box__textbox
           %input#textbox.formbox__textbox{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
           .form__mask
           %label.form__mask__image
