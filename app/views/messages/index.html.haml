@@ -1,0 +1,58 @@
+
+.top
+  グループを作成しました
+
+.left
+  .left__header
+    .left__header__username-box
+      .username username
+      .icon-box
+        .newgroup
+        =link_to "https://twitter.com/", class: "contents__btn" do
+          = fa_icon 'edit'     
+        =link_to "https://facebook.com/", class: "contents__btn" do
+          = fa_icon 'cog'     
+
+  .leftblock
+    .leftblock__main
+      .groupname groupname
+      .latest latest    
+    .leftblock__main
+      .groupname groupname
+      .latest latest
+    .leftblock__main
+      .groupname groupname
+      .latest latest
+    .leftblock__main
+      .groupname groupname
+      .latest latest
+
+.right
+  .right__header
+    .right__header__group
+      .right-groupname groupname
+      .member menber
+    .right__header__editbtn Edit
+  .right__main  
+    .message
+      .message-username username
+      .message-date date
+      .message-text  hoge
+    .message
+      .message-username username
+      .message-date date
+      .message-text  hoge
+    .message
+      .message-username username
+      .message-date date
+      .message-text  hogeß
+    .form
+      .form__box
+        .form__box__textbox
+          %input#textbox.formbox__textbox{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          .form__mask
+          %label.form__mask__image
+            =fa_icon 'picture-o',class: 'icon'
+          -# %input.hidden{type: 'file'}
+        %input.sendbtn{type: 'submit', value:'Send'}
+
