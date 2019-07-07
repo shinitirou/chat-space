@@ -1,4 +1,6 @@
 
+
+
 -# .top
 -#   グループを作成しました
 
@@ -20,7 +22,9 @@
         = link_to group_messages_path(group) do
           .groupname
             = group.name
-          .latest latest    
+          .latest 
+            = group.show_last_message
+
 
 .right
   .right__header
@@ -28,19 +32,20 @@
       .right-groupname groupname
       .member menber
     .right__header__editbtn Edit
-  .right__main  
-    .message
-      .message-username username
-      .message-date date
-      .message-text  hoge
-    .message
-      .message-username username
-      .message-date date
-      .message-text  hoge
-    .message
-      .message-username username
-      .message-date date
-      .message-text  hogeß
+  .right__main
+
+    - @messages.each do|message|
+      .message
+        .message-username  
+          =message.user.name
+        .message-date
+          =message.created_at.strftime("%Y/%m/%d %H:%M")
+        .message-text
+          - if message.content.present?
+            = message.content
+            = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+        
+
 
     .form
       .form__box
