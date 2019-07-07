@@ -9,24 +9,18 @@
       = current_user.name
       .icon-box
         .newgroup
-        =link_to "https://twitter.com/", class: "icon" do
-          = fa_icon 'edit'     
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
         =link_to edit_user_path(current_user) do
           = fa_icon 'cog',class: "icon"
 
   .leftblock
-    .leftblock__main
-      .groupname groupname
-      .latest latest    
-    .leftblock__main
-      .groupname groupname
-      .latest latest
-    .leftblock__main
-      .groupname groupname
-      .latest latest
-    .leftblock__main
-      .groupname groupname
-      .latest latest
+    - current_user.groups.each do |group|
+      .leftblock__main
+        = link_to group_messages_path(group) do
+          .groupname
+            = group.name
+          .latest latest    
 
 .right
   .right__header

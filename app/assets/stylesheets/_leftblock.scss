@@ -34,7 +34,6 @@ html, body {
       justify-content: flex-start;
       .username{
         float: left;
-        width: 80px;
         height: 24px;
         color:white;
         font-size: 16px;
@@ -44,7 +43,7 @@ html, body {
         margin: 0 0 0 auto;
         height: 24px;
         width: 40px;
-        .contents__btn{
+        .icon{
          color: white
         }
       }
@@ -57,15 +56,15 @@ html, body {
     padding: 20px 0;
     &__main{
     padding: 0 20px 40px;
-      .groupname{
-        font-size: 15px;
-        color:white;
-      }
-      .latest{
-        padding-top: 5px;
-        font-size: 11px;
-        color:white;
-      }
+            .groupname{
+              font-size: 15px;
+              color:white;
+            }
+            .latest{
+              padding-top: 5px;
+              font-size: 11px;
+              color:white;
+            }
     }
   } 
 }
@@ -171,7 +170,8 @@ html, body {
               height: 50px;
               padding-right: 10px;
               float: right;
-              .form__mask__image{
+              .icon{
+                padding-top: 20px;
                 font-size: 20px;
                 line-height: 50px;
                 display: none;
