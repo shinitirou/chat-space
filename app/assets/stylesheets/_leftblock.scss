@@ -4,15 +4,15 @@ html, body {
   height: 100%;
   width: 100vw;
 }
-.top{
-  height: 18px;
-  background-color: #38AEF0;
-  width: 100%;
-  text-align: center;
-  color:white;
-  font-size: 14px;
-  line-height: 18px;
-}
+// .top{
+//   height: 18px;
+//   background-color: #38AEF0;
+//   width: 100%;
+//   text-align: center;
+//   color:white;
+//   font-size: 14px;
+//   line-height: 18px;
+// }
 
 .left{
   display: inline-block;
@@ -165,36 +165,44 @@ html, body {
             color: #434a54;
             padding: 0 40px 0 10px;
             border-style: hidden;
-            .form__mask {
-              background-color: white;
-              height: 50px;
-              padding-right: 10px;
-              float: right;
+          }
+          .form__mask {
+            background-color: white;
+            width: 40px;
+            height: 50px;
+            padding-right: 10px;
+            float: right;
+            .form__mask__image{
+              font-size: 20px;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+            
               .icon{
-                padding-top: 20px;
-                font-size: 20px;
-                line-height: 50px;
-                display: none;
-                position: absolute;
-                float: right;
+                display: inline-block;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
               }
               .hidden {
-                display: none;
+              display: none;
               }
             }
           }
+        }  
+
+        .sendbtn{
+            height: 50px;
+            width: 100px;
+            background-color: #38aef0;
+            float: left;
+            margin-left: 15px;
+            color:white;
+            text-align: center;
+            font-size: 16px;
+            line-height: 50px;
         }
-      }
-      .sendbtn{
-        height: 50px;
-        width: 100px;
-        background-color: #38aef0;
-        float: left;
-        margin-left: 15px;
-        color:white;
-        text-align: center;
-        font-size: 16px;
-        line-height: 50px;
+        
       }
         
       
