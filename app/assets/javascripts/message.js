@@ -1,7 +1,7 @@
 
 $(function(){
 
-  function buildHTML(comment){
+  function buildHTML(message){
     var html = `<div class='message'>
                    <div class='message-username'>
                    ${message.message-username}
@@ -31,7 +31,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.right__main').append(html)
+      $('.right__main').append(html).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
       $('.content').val('')
     })
   })
