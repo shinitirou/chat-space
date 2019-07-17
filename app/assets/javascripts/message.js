@@ -12,14 +12,13 @@ $(function(){
                    </div>
                    <div class='message-text'>
                    ${message.content}
-                   
                    </div>
                 </div>`
     return html;
   }
 
   
-  $('#new_message').on('submit', function(e){
+  $('#new_message').on('submit','#add1', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
