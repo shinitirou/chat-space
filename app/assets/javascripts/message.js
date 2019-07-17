@@ -2,15 +2,17 @@
 $(function(){
 
   function buildHTML(message){
-    var html = `<div class='message'>
+    var html = 
+              `<div class='message'>
                    <div class='message-username'>
-                   ${message.message-username}
+                   ${message.name}
                    </div>
                    <div class='message-date'>
-                   ${message.message-date}
+                   ${message.created_at}
                    </div>
                    <div class='message-text'>
-                   ${message.message-text}
+                   ${message.content}
+                   
                    </div>
                 </div>`
     return html;
