@@ -52,7 +52,7 @@ html, body {
   }
   .leftblock{
     background-color: #2f3e51;
-    height:calc(100% - 100px);
+    // height:calc(100% - 100px);
     width: 300px;
     padding: 20px 0;
     &__main{
@@ -117,7 +117,7 @@ html, body {
     padding-top: 46px;
     .message{
       margin: 0 40px 40px;
-      height: 80px;
+      // height: 80px;
       background-color: #fafafa;
 
       .message-username{
@@ -131,11 +131,18 @@ html, body {
         float: left;
       }
       .message-text{
-        display: flex;
+        display: block;
         clear: both;
         font-size: 14px;
         margin-top: 10px;
         color:#434a54;
+        height: 56px;
+      }
+      .lower-message__image{
+        display: block;
+        padding-top: 10px;
+        width: 190px;
+        height: 130px;
       }
     }
     .form{

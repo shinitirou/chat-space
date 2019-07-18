@@ -12,6 +12,7 @@ $(function(){
                    </div>
                    <div class='message-text'>
                    ${message.content}
+                   ${message.image.url}
                    </div>
                 </div>`
     return html;
@@ -33,7 +34,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.right__main').append(html).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
-      $('.content').val('')
+      $('.textbox').val('')
+    })
+    .fail(function(){
+      alert('error');
     })
   })
 })
