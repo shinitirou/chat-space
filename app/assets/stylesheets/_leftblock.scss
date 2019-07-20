@@ -4,21 +4,13 @@ html, body {
   height: 100%;
   width: 100vw;
 }
-// .top{
-//   height: 18px;
-//   background-color: #38AEF0;
-//   width: 100%;
-//   text-align: center;
-//   color:white;
-//   font-size: 14px;
-//   line-height: 18px;
-// }
 
 .left{
   display: inline-block;
   width: 300px;
   height: 100%;
   color: #253141;
+  overflow: scroll;
   float:left;
   &__header{
     background-color: #253141;
@@ -51,7 +43,6 @@ html, body {
   }
   .leftblock{
     background-color: #2f3e51;
-    height:calc(100% - 100px);
     width: 300px;
     padding: 20px 0;
     &__main{
@@ -70,7 +61,7 @@ html, body {
 }
 .right{
   width:calc(100% - 300px);
-  height:100%;
+  height:85%;
   background-color:white;
   float:left;
   &__header{
@@ -112,13 +103,14 @@ html, body {
     height:calc(100% - 100px);
     background-color: #fafafa;
     float: left;
+    overflow: scroll;
     padding-top: 46px;
     .message{
       margin: 0 40px 40px;
-      height: 80px;
       background-color: #fafafa;
 
       .message-username{
+        height: 44px;
         font-size: 16px;
         font-weight: bold;
         float: left;
@@ -129,11 +121,15 @@ html, body {
         float: left;
       }
       .message-text{
-        display: flex;
+        display: block;
         clear: both;
         font-size: 14px;
-        margin-top: 10px;
+        margin: 20px 0 10 0;
         color:#434a54;
+        .lower-message__image{
+          display: block;
+          padding-top: 10px;    
+        }
       }
     }
     .form{

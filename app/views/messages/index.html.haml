@@ -1,9 +1,3 @@
-
-
-
--# .top
--#   グループを作成しました
-
 .left
   .left__header
     .left__header__username-box
@@ -33,7 +27,6 @@
       .member menber
     .right__header__editbtn Edit
   .right__main
-
     - @messages.each do|message|
       .message
         .message-username  
@@ -43,7 +36,7 @@
         .message-text
           - if message.content.present?
             = message.content
-            = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+          = image_tag message.image.url, class: 'lower-message__image' if message.image.present?   
         
 
 
