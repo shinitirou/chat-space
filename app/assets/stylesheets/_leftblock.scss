@@ -4,15 +4,6 @@ html, body {
   height: 100%;
   width: 100vw;
 }
-// .top{
-//   height: 18px;
-//   background-color: #38AEF0;
-//   width: 100%;
-//   text-align: center;
-//   color:white;
-//   font-size: 14px;
-//   line-height: 18px;
-// }
 
 .left{
   display: inline-block;
@@ -52,7 +43,6 @@ html, body {
   }
   .leftblock{
     background-color: #2f3e51;
-    // height:calc(100% - 100px);
     width: 300px;
     padding: 20px 0;
     &__main{
@@ -117,7 +107,6 @@ html, body {
     padding-top: 46px;
     .message{
       margin: 0 40px 40px;
-      // height: 80px;
       background-color: #fafafa;
 
       .message-username{
@@ -137,12 +126,9 @@ html, body {
         font-size: 14px;
         margin: 20px 0 10 0;
         color:#434a54;
-        // height: 300px;
         .lower-message__image{
           display: block;
-          padding-top: 10px;
-          width: 190px;
-          height: 130px;
+          padding-top: 10px;    
         }
       }
     }

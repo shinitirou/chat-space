@@ -2,7 +2,8 @@
 $(function(){
 
   function buildHTML(message){
-    console.log(message);
+    var content = message.content ? `${message.content}` : "";
+    var image = message.image ? `${message.image}` : "";
     var html = 
               `<div class='message'>
                    <div class='message-username'>
@@ -12,8 +13,8 @@ $(function(){
                    ${message.created_at}
                    </div>
                    <div class='message-text'>
-                   ${message.content}
-                   ${message.image}
+                   ${content}
+                   <img src="${image}" class="lower-message__image" alt="">
                    </div>
                 </div>`
     return html;
@@ -21,7 +22,6 @@ $(function(){
 
   
   $('#new_message').on('submit', function(e){
-    console.log('aaa');
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -36,11 +36,13 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.right__main').append(html).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
-      
-      $('.textbox').val('')
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('error');
     })
+    .always(() => {
+      $(".sendbtn").removeAttr("disabled");
+    });
   })
 })
