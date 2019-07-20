@@ -2,6 +2,7 @@
 $(function(){
 
   function buildHTML(message){
+    console.log(message);
     var html = 
               `<div class='message'>
                    <div class='message-username'>
@@ -12,14 +13,15 @@ $(function(){
                    </div>
                    <div class='message-text'>
                    ${message.content}
-                   ${message.image.url}
+                   ${message.image}
                    </div>
                 </div>`
     return html;
   }
 
   
-  $('#new_message').on('submit','#add1', function(e){
+  $('#new_message').on('submit', function(e){
+    console.log('aaa');
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -34,6 +36,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.right__main').append(html).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
+      
       $('.textbox').val('')
     })
     .fail(function(){
