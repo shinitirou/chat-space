@@ -23,9 +23,13 @@
 .right
   .right__header
     .right__header__group
-      .right-groupname groupname
-      .member menber
-    .right__header__editbtn Edit
+      .right-groupname
+        = @group.name
+      .member
+        - @group.users.each do |user|
+          = user.name
+    .right__header__editbtn 
+      = link_to "edit", edit_group_path(@group)
   .right__main
     - @messages.each do|message|
       .message
