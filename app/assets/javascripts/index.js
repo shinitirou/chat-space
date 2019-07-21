@@ -38,8 +38,13 @@ $(function() {
         });
       }
       else {
-        appendErrMsgToHTML("ユーザー検索に失敗しました");
+        appendErrMsgToHTML("一致するユーザーはいません");
       }
+    })
+    .fail(function(){
+      alert('検索に失敗しました');
     });
+
+
   })
 });
