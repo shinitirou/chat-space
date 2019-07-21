@@ -29,8 +29,7 @@ $(function() {
                       <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                   </div>
                 </div>`
-          member_list.append(html)
-    
+    member_list.append(html)
   }
 
   
@@ -56,6 +55,7 @@ $(function() {
         appendErrMsgToHTML("一致するユーザーはいません");
       }
     })
+
     .fail(function(){
       alert('検索に失敗しました');
     });
