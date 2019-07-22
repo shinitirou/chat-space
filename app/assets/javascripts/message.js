@@ -6,7 +6,7 @@ $(function(){
     var image = message.image ? `${message.image}` : "";
     var html = 
               `<div class='message'>
-                   <div class='message-username'>
+                   <div class='message-username' data-message-id="${message.id}">
                    ${message.name}
                    </div>
                    <div class='message-date'>
