@@ -47,24 +47,34 @@ $(function(){
   })
 
   var reloadMessages = function() {
+
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    last_message_id = $('message').last().data('message-id')
+    var last_message_id = $('message').last().data('message-id')
+    var url= "https://groups/"+ groupId +"/api/messages"
     $.ajax({
       //ルーティングで設定した通りのURLを指定
-      url: "/api/messages",
+      url: url,
       //ルーティングで設定した通りhttpメソッドをgetに指定
       type: 'get',
       dataType: 'json',
       //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
+
     .done(function(messages) {
+
+      var insertHTML = '';
+      messages.forEach(function(message){
+        var insertHTML = buildHTML(message)
+        $('.message').append(insertHTML).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
+      end
       console.log('success');
-    })
+      })
+    })      
     .fail(function() {
       console.log('error');
     });
-  };
-
-})
+  } 
+   setInterval(reloadMessages, 5000);
+});
 
