@@ -1,7 +1,7 @@
 
 $(function(){
 
-  function buildHTML(message){
+var buildHTML=function(message){
     var content = message.content ? `${message.content}` : "";
     var image = message.image ? `${message.image}` : "";
     var html = 
@@ -48,11 +48,8 @@ $(function(){
   })
 
   var reloadMessages = function() {
-
     var last_message_id = $('.message').last().data('message-id')
-    console.log(last_message_id)
     var url= "api/messages"
-    console.log(url)
     $.ajax({
       url: url,
       type: 'GET',
@@ -61,17 +58,16 @@ $(function(){
     })
 
     .done(function(messages) {
-
       var insertHTML = '';
       messages.forEach(function(message){
-        var insertHTML = buildHTML(message)
-        $('.message').append(insertHTML).animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
-      end
-      console.log('success');
-      })
-    })      
+        insertHTML = buildHTML(message)
+        $('.right__main').append(insertHTML)
+      })      
+
+      $('.right__main').animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
+    })
     .fail(function() {
-      console.log('error');
+      alert('自動更新に失敗しました');
     });
   } 
    setInterval(reloadMessages, 5000);
