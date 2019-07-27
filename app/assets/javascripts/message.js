@@ -25,13 +25,14 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
+    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false
+      contentType: false,
     })
     .done(function(data){
       var html = buildHTML(data);
@@ -48,16 +49,14 @@ $(function(){
 
   var reloadMessages = function() {
 
-    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    var last_message_id = $('message').last().data('message-id')
-    var url= "https://groups/"+ groupId +"/api/messages"
+    var last_message_id = $('.message').last().data('message-id')
+    console.log(last_message_id)
+    var url= "api/messages"
+    console.log(url)
     $.ajax({
-      //ルーティングで設定した通りのURLを指定
       url: url,
-      //ルーティングで設定した通りhttpメソッドをgetに指定
-      type: 'get',
+      type: 'GET',
       dataType: 'json',
-      //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
 
