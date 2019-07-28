@@ -47,27 +47,29 @@ var buildHTML=function(message){
   })
 
   var reloadMessages = function() {
+    
     var last_message_id = $('.message').last().data('message-id')
     var url= "api/messages"
-    $.ajax({
-      url: url,
-      type: 'GET',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
+    if( last_message_id.prop !== 'undefined') {
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        messages.forEach(function(message){
+          insertHTML = buildHTML(message)
+          $('.right__main').append(insertHTML)
+        })      
 
-    .done(function(messages) {
-      var insertHTML = '';
-      messages.forEach(function(message){
-        insertHTML = buildHTML(message)
-        $('.right__main').append(insertHTML)
-      })      
-
-      $('.right__main').animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
-    })
-    .fail(function() {
-      alert('自動更新に失敗しました');
-    });
+        $('.right__main').animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
+      })
+      .fail(function() {
+        alert('自動更新に失敗しました');
+      });
+    }
   } 
    setInterval(reloadMessages, 5000);
 });
