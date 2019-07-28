@@ -1,11 +1,11 @@
 
 $(function(){
 
-  function buildHTML(message){
+var buildHTML=function(message){
     var content = message.content ? `${message.content}` : "";
     var image = message.image ? `${message.image}` : "";
     var html = 
-              `<div class='message'>
+              `<div class='message' data-message-id="${message.id}">
                    <div class='message-username'>
                    ${message.name}
                    </div>
@@ -31,7 +31,7 @@ $(function(){
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false
+      contentType: false,
     })
     .done(function(data){
       var html = buildHTML(data);
@@ -45,4 +45,30 @@ $(function(){
       $(".sendbtn").removeAttr("disabled");
     });
   })
-})
+
+  var reloadMessages = function() {
+    var last_message_id = $('.message').last().data('message-id')
+    var url= "api/messages"
+    $.ajax({
+      url: url,
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+
+    .done(function(messages) {
+      var insertHTML = '';
+      messages.forEach(function(message){
+        insertHTML = buildHTML(message)
+        $('.right__main').append(insertHTML)
+      })      
+
+      $('.right__main').animate({scrollTop: $('.right__main')[0].scrollHeight}, 'fast');
+    })
+    .fail(function() {
+      alert('自動更新に失敗しました');
+    });
+  } 
+   setInterval(reloadMessages, 5000);
+});
+
