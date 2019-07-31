@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 # lock "~> 3.11.0"
 
-lock '<3.11.0>'
+lock '3.11.0'
 
 # set :application, "my_app_name"
 set :application, "chat-space"
@@ -13,7 +13,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 set :rbenv_type, :user
 
-set :rbenv_ruby, '<2.5.1>'
+set :rbenv_ruby, '2.5.1'
 
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/shinichiro0917.pem']
