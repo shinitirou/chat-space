@@ -18,7 +18,7 @@ $(function() {
     search_list.append(html);
   }
 
-  var member_list = $("#chat-group-users");
+  var member_list = $(".chat-group-users");
 
   function addUser(userId,userName) {
 

@@ -26,6 +26,7 @@
       .right-groupname
         = @group.name
       .member
+        Member : 
         - @group.users.each do |user|
           = user.name
     .right__header__editbtn 
