@@ -32,7 +32,7 @@ html, body {
         font-weight:bold;
       }
       .icon-box{
-        margin: 0 0 0 auto;
+        float: right;;
         height: 24px;
         width: 40px;
         .icon{
@@ -44,7 +44,9 @@ html, body {
   .leftblock{
     background-color: #2f3e51;
     width: 300px;
+    height: calc( 100% - 135px) ;
     padding: 20px 0;
+    overflow: scroll;
     &__main{
     padding: 0 20px 40px;
             .groupname{
