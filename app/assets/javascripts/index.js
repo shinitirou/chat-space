@@ -47,8 +47,12 @@ $(function() {
     .done(function(users) {
       $("#user-search-result").empty();
       if (users.length !== 0) {
+        console.log(users)
         users.forEach(function(user){
-          appendUser(user);
+
+          if (user.id !== user.current){
+            appendUser(user);
+          }
         });
       }
       else {
