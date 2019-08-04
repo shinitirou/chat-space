@@ -18,7 +18,7 @@ $(function() {
     search_list.append(html);
   }
 
-  var member_list = $(".chat-group-users");
+  var member_list = $("#chat-group-users");
 
   function addUser(userId,userName) {
 
@@ -47,9 +47,7 @@ $(function() {
     .done(function(users) {
       $("#user-search-result").empty();
       if (users.length !== 0) {
-        console.log(users)
         users.forEach(function(user){
-
           if (user.id !== user.current){
             appendUser(user);
           }
@@ -66,7 +64,7 @@ $(function() {
   })
 
   $(document).on("click", ".user-search-add", function () {
-    $(".chat-group-user").val();
+    $("#chat-group-user").val();
       userId = $(this).attr('data-user-id')
       userName = $(this).attr('data-user-name')
       addUser(userId,userName)
